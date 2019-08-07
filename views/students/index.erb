@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <ul>
+      <li><a href="/students/create">Enroll Students</a></li>
+    </ul>
+  </nav>
+</header>
+<h2>Students</h2>
+
+<hr>
+<% for student in @students %>
+  <p>Name: <%= student.format_name() %></p>
+  <p><a href="/students/<%= student.id() %>">Show Student</a></p>
+  <hr>
+<% end %>
